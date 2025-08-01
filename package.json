@@ -3,10 +3,10 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://your-username.github.io/safety-management-app",
+  "homepage": "https://safety-management-app.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/safety-management-app.git"
+    "url": "https://github.com/citra-smaradahana/safety-management-app.git"
   },
   "scripts": {
     "dev": "vite",
