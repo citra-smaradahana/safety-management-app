@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+  color: #e5e7eb;
+  background: linear-gradient(135deg, #181c2f 0%, #232946 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #181c2f 0%, #232946 100%);
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: rgba(36, 40, 59, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 24px;
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  padding: 40px 36px 32px 36px;
+  max-width: 1000px;
+  height: 650px;
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.login-glass-card {
+  max-width: 380px !important;
+  height: auto !important;
+}
+
+input,
+select,
+textarea {
+  background: #f8fafc;
+  border: 1.5px solid #6366f1;
+  border-radius: 12px;
+  color: #181c2f;
+  font-size: 1em;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  width: 100%;
+  outline: none;
+  transition: border 0.2s, background 0.2s;
+  box-sizing: border-box;
+}
+input:focus,
+select:focus {
+  border-color: #a78bfa;
+  background: #e0e7ef;
+}
+
+button {
+  border-radius: 16px;
+  border: none;
+  padding: 12px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: inherit;
+  background: linear-gradient(90deg, #6366f1 60%, #06b6d4 100%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #6366f133;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+button:hover {
+  background: linear-gradient(90deg, #a78bfa 60%, #06b6d4 100%);
+}
+
+.hazard-btn {
+  min-width: 120px;
+  padding: 14px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 18px;
+  border: none;
+  background: linear-gradient(90deg, #6366f1 60%, #06b6d4 100%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #6366f133;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.hazard-btn:hover {
+  background: linear-gradient(90deg, #a78bfa 60%, #06b6d4 100%);
+}
+.hazard-btn-back {
+  background: #232946;
+  color: #fff;
+  border: 1.5px solid #6366f1;
+}
+.hazard-btn-back:hover {
+  background: #353b5b;
+}
+.hazard-btn-submit {
+  background: linear-gradient(90deg, #22d3ee 60%, #6366f1 100%);
+  color: #fff;
+}
+.hazard-btn-submit:hover {
+  background: linear-gradient(90deg, #06b6d4 60%, #a78bfa 100%);
+}
+
+textarea {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+::-webkit-input-placeholder {
+  color: #cbd5e1;
+}
+::-moz-placeholder {
+  color: #cbd5e1;
+}
+:-ms-input-placeholder {
+  color: #cbd5e1;
+}
+::placeholder {
+  color: #cbd5e1;
+}
