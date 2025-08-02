@@ -140,7 +140,6 @@ function App() {
   const [user, setUser] = useState(null); // user login
   const [activeMenu, setActiveMenu] = useState("Home");
   const [activeSubMenu, setActiveSubMenu] = useState("Form Fit To Work");
-  const [showProfile, setShowProfile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const userRole = (user?.role || "").toLowerCase();
   const userNama = user?.nama || "";
@@ -152,14 +151,6 @@ function App() {
   const [notifications, setNotifications] = useState([]);
   const [showNotificationModal, setShowNotificationModal] = useState(false);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
-  // Dummy data tasklist agar tidak error
-  const tasklist = [];
-  const [q1, setQ1] = useState(null);
-  const [q2, setQ2] = useState(null);
-  const [q3, setQ3] = useState(null);
-  const [q4, setQ4] = useState(null);
-  const [bahayaYangDapatTerjadi, setBahayaYangDapatTerjadi] = useState("");
-  const [kondisiKerja, setKondisiKerja] = useState("");
 
   // Debug logs untuk user data
   console.log("App - User data:", user);
@@ -2207,7 +2198,6 @@ function TasklistDemo({ user }) {
   };
 
   // Filtering table utama: hanya hazard yang perlu aksi user
-  const userRole = (user?.role || "").toLowerCase();
   const getReadOnly = (status, hz) => {
     // Tab "monitoring" dan "riwayat" selalu read-only
     if (activeTab === "monitoring" || activeTab === "riwayat") {
@@ -2264,7 +2254,7 @@ function TasklistDemo({ user }) {
     }
 
     switch (activeTab) {
-      case "todo":
+      case "todo": {
         // Logic berdasarkan role yang wajib mengerjakan tasklist
         const todoData = hazards.filter((hz) => {
           // Status "Submit": hanya PIC yang bisa aksi
@@ -2295,8 +2285,9 @@ function TasklistDemo({ user }) {
         });
         console.log("To Do Data (Role-based Action Required):", todoData);
         return todoData;
+      }
 
-      case "monitoring":
+      case "monitoring": {
         // Logic berdasarkan role di hazard_report, bukan role di users
         const monitoringData = hazards.filter((hz) => {
           // Jika user terlibat (sebagai pelapor, PIC, atau evaluator) dan status bukan Closed
@@ -2307,13 +2298,16 @@ function TasklistDemo({ user }) {
         });
         console.log("Monitoring Data (All Read-Only):", monitoringData);
         return monitoringData;
+      }
 
-      case "riwayat":
+      case "riwayat": {
         // Riwayat: status Closed untuk semua user yang terlibat di hazard_report
         return hazards.filter((hz) => hz.status === "Closed" && isRelated(hz));
+      }
 
-      default:
+            default: {
         return [];
+      }
     }
   };
 
@@ -2444,7 +2438,7 @@ function TasklistDemo({ user }) {
             </div>
           ) : (
             <div>
-              {currentTabDataToShow.map((hz, idx) => (
+              {currentTabDataToShow.map((hz) => (
                 <div
                   key={hz.id}
                   style={{

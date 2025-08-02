@@ -14,7 +14,7 @@ function DropzoneKaryawan() {
     const uploaded = [];
     for (const file of acceptedFiles) {
       const filePath = `${Date.now()}-${file.name}`;
-      const { data, error } = await supabase.storage
+      const { error } = await supabase.storage
         .from("foto-karyawan")
         .upload(filePath, file);
       if (error) {

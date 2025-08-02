@@ -3,11 +3,9 @@ import { useDropzone } from "react-dropzone";
 import "./Dropzone.css";
 
 function Dropzone({ onFilesChange }) {
-  const [selectedFiles, setSelectedFiles] = useState([]);
   const [previews, setPreviews] = useState([]);
 
   const onDrop = (acceptedFiles) => {
-    setSelectedFiles(acceptedFiles);
     setPreviews(
       acceptedFiles.map((file) => ({
         name: file.name,
