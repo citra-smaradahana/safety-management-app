@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Dropzone from "./components/Dropzone/Dropzone";
 import UploadKaryawan from "./components/Dropzone/UploadKaryawan";
 import HazardForm from "./components/HazardForm/index.jsx";
@@ -1764,7 +1764,7 @@ function App() {
                   fontSize: "16px",
                 }}
               >
-                Ã—
+                ×
               </button>
             </div>
 
@@ -2404,10 +2404,10 @@ function TasklistDemo({ user }) {
             <div style={{ textAlign: "center", marginTop: 64 }}>
               <div style={{ fontSize: 60, opacity: 0.15, marginBottom: 8 }}>
                 {activeTab === "todo"
-                  ? "ðŸ“‹"
+                  ? "📋"
                   : activeTab === "monitoring"
-                  ? "ðŸ“Š"
-                  : "ðŸ“š"}
+                  ? "📊"
+                  : "📚"}
               </div>
               <div style={{ color: "#888", fontWeight: 600, marginTop: 12 }}>
                 {activeTab === "todo"
@@ -2554,7 +2554,7 @@ function TasklistDemo({ user }) {
                       cursor: mainPage === 1 ? "not-allowed" : "pointer",
                     }}
                   >
-                    â†
+                    ←
                   </button>
                   <span
                     style={{
@@ -2587,7 +2587,7 @@ function TasklistDemo({ user }) {
                           : "pointer",
                     }}
                   >
-                    â†’
+                    →
                   </button>
                 </div>
               )}
@@ -3298,12 +3298,3 @@ function TasklistDemo({ user }) {
       />
     );
   }
-  return null;
-}
-// Trigger deployment - 08/02/2025 07:14:36
-
-// Trigger Vercel deployment - 2025-08-02 07:30:03
-
-// New deployment trigger
-
-
