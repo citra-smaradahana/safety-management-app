@@ -659,7 +659,7 @@ function App() {
           style={{
             width: "100%",
             background: "linear-gradient(135deg, #254188 0%, #ff6b35 100%)",
-            borderRadius: "0 0 16px 16px",
+            borderRadius: "0",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -702,7 +702,8 @@ function App() {
         <div
           className="mobile-profile-card"
           style={{
-            width: "92%",
+            width: "calc(100% - 32px)",
+            margin: "0 16px",
             background: "linear-gradient(135deg, #254188 0%, #ff6b35 100%)",
             borderRadius: 12,
             boxShadow: "0 8px 32px rgba(37, 65, 136, 0.3)",
@@ -878,7 +879,7 @@ function App() {
             borderRadius: "20px 20px 0 0",
           }}
         />
-        {/* Kolom 1: Fit To Work, Hazard */}
+        {/* Baris 1: Fit To Work, Validasi, Take 5 */}
         <div className="menu-row">
           <button
             className="mobile-menu-button menu-button-blue"
@@ -893,18 +894,6 @@ function App() {
             <span>Fit To Work</span>
           </button>
           <button
-            className="mobile-menu-button menu-button-orange"
-            onClick={() => setActiveMenu("Hazard Report")}
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L1 21h22L12 2zm0 3.17L19.83 19H4.17L12 5.17zM11 16h2v2h-2zm0-6h2v4h-2z" />
-            </svg>
-            <span>Hazard</span>
-          </button>
-        </div>
-        {/* Kolom 2: Validasi, PTO */}
-        <div className="menu-row">
-          <button
             className="mobile-menu-button menu-button-cyan"
             onClick={() => setActiveMenu("Validasi Fit To Work")}
           >
@@ -914,18 +903,6 @@ function App() {
             <span>Validasi</span>
           </button>
           <button
-            className="mobile-menu-button menu-button-purple"
-            onClick={() => setActiveMenu("PTO")}
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
-            </svg>
-            <span>PTO</span>
-          </button>
-        </div>
-        {/* Baris 3: Take 5 */}
-        <div className="menu-row">
-          <button
             className="mobile-menu-button menu-button-green"
             onClick={() => setActiveMenu("Take 5")}
           >
@@ -933,6 +910,27 @@ function App() {
               <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
             </svg>
             <span>Take 5</span>
+          </button>
+        </div>
+        {/* Baris 2: Hazard, PTO */}
+        <div className="menu-row">
+          <button
+            className="mobile-menu-button menu-button-orange"
+            onClick={() => setActiveMenu("Hazard Report")}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L1 21h22L12 2zm0 3.17L19.83 19H4.17L12 5.17zM11 16h2v2h-2zm0-6h2v4h-2z" />
+            </svg>
+            <span>Hazard</span>
+          </button>
+          <button
+            className="mobile-menu-button menu-button-purple"
+            onClick={() => setActiveMenu("PTO")}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
+            </svg>
+            <span>PTO</span>
           </button>
         </div>
       </div>

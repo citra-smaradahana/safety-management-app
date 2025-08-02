@@ -261,6 +261,12 @@ main.monitoring-page {
   z-index: 1;
 }
 
+/* Menu row dengan 2 item - sejajar dengan row 3 item */
+.menu-row:has(button:nth-child(2):last-child) {
+  justify-content: center;
+  padding-left: 50px; /* Offset untuk sejajar dengan row 3 item */
+}
+
 /* Menu button color variants - Updated dengan warna yang lebih menarik */
 .menu-button-blue {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
