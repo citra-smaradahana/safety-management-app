@@ -849,90 +849,114 @@ function App() {
           </button>
         </div>
       </div>
-      {/* Mobile Main Menu (icon grid) - Updated untuk 3 kolom */}
+      {/* Mobile Main Menu (List Layout) */}
       <div
-        className="mobile-main-menu-grid mobile-only"
+        className="mobile-main-menu-list mobile-only"
         style={{
           display: "none",
           flexDirection: "column",
-          alignItems: "center",
-          margin: "16px 0 0 0",
-          gap: 16,
+          margin: "16px 16px 0 16px",
+          gap: 8,
           background: "transparent",
-          borderRadius: "20px 20px 0 0",
-          padding: "16px 0",
+          borderRadius: "16px",
+          padding: "16px",
           boxShadow: "none",
           position: "relative",
           zIndex: 10,
         }}
       >
-        {/* Background pattern overlay untuk menu area */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: "transparent",
-            pointerEvents: "none",
-            borderRadius: "20px 20px 0 0",
+        {/* Menu Item: Fit To Work */}
+        <button
+          className="mobile-menu-list-item menu-item-blue"
+          onClick={() => {
+            handleMenuClick("Fit To Work");
+            handleSubMenuClick("Form Fit To Work");
           }}
-        />
-        {/* Baris 1: Fit To Work, Validasi, Take 5 */}
-        <div className="menu-row">
-          <button
-            className="mobile-menu-button menu-button-blue"
-            onClick={() => {
-              handleMenuClick("Fit To Work");
-              handleSubMenuClick("Form Fit To Work");
-            }}
-          >
+        >
+          <div className="menu-item-icon">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
             </svg>
-            <span>Fit To Work</span>
-          </button>
-          <button
-            className="mobile-menu-button menu-button-cyan"
-            onClick={() => setActiveMenu("Validasi Fit To Work")}
-          >
+          </div>
+          <span className="menu-item-text">Fit To Work</span>
+          <div className="menu-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </div>
+        </button>
+
+        {/* Menu Item: Validasi */}
+        <button
+          className="mobile-menu-list-item menu-item-cyan"
+          onClick={() => setActiveMenu("Validasi Fit To Work")}
+        >
+          <div className="menu-item-icon">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>Validasi</span>
-          </button>
-          <button
-            className="mobile-menu-button menu-button-green"
-            onClick={() => setActiveMenu("Take 5")}
-          >
+          </div>
+          <span className="menu-item-text">Validasi Fit To Work</span>
+          <div className="menu-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </div>
+        </button>
+
+        {/* Menu Item: Take 5 */}
+        <button
+          className="mobile-menu-list-item menu-item-green"
+          onClick={() => setActiveMenu("Take 5")}
+        >
+          <div className="menu-item-icon">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
             </svg>
-            <span>Take 5</span>
-          </button>
-        </div>
-        {/* Baris 2: Hazard (bawah Fit To Work), PTO (bawah Validasi) */}
-        <div className="menu-row menu-row-2-items">
-          <button
-            className="mobile-menu-button menu-button-orange"
-            onClick={() => setActiveMenu("Hazard Report")}
-          >
+          </div>
+          <span className="menu-item-text">Take 5</span>
+          <div className="menu-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </div>
+        </button>
+
+        {/* Menu Item: Hazard */}
+        <button
+          className="mobile-menu-list-item menu-item-orange"
+          onClick={() => setActiveMenu("Hazard Report")}
+        >
+          <div className="menu-item-icon">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2L1 21h22L12 2zm0 3.17L19.83 19H4.17L12 5.17zM11 16h2v2h-2zm0-6h2v4h-2z" />
             </svg>
-            <span>Hazard</span>
-          </button>
-          <button
-            className="mobile-menu-button menu-button-purple"
-            onClick={() => setActiveMenu("PTO")}
-          >
+          </div>
+          <span className="menu-item-text">Hazard Report</span>
+          <div className="menu-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </div>
+        </button>
+
+        {/* Menu Item: PTO */}
+        <button
+          className="mobile-menu-list-item menu-item-purple"
+          onClick={() => setActiveMenu("PTO")}
+        >
+          <div className="menu-item-icon">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
             </svg>
-            <span>PTO</span>
-          </button>
-        </div>
+          </div>
+          <span className="menu-item-text">PTO</span>
+          <div className="menu-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </div>
+        </button>
       </div>
       {/* Mobile Pop Up Content */}
       {[
