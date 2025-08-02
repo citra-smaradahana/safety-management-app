@@ -262,9 +262,18 @@ main.monitoring-page {
 }
 
 /* Menu row dengan 2 item - sejajar dengan row 3 item */
-.menu-row:has(button:nth-child(2):last-child) {
-  justify-content: center;
-  padding-left: 50px; /* Offset untuk sejajar dengan row 3 item */
+.menu-row-2-items {
+  justify-content: flex-start;
+  padding-left: 0;
+  gap: 16px;
+}
+
+.menu-row-2-items .mobile-menu-button:first-child {
+  margin-left: 0;
+}
+
+.menu-row-2-items .mobile-menu-button:nth-child(2) {
+  margin-left: 132px; /* Jarak untuk sejajar dengan menu Validasi */
 }
 
 /* Menu button color variants - Updated dengan warna yang lebih menarik */

@@ -912,8 +912,8 @@ function App() {
             <span>Take 5</span>
           </button>
         </div>
-        {/* Baris 2: Hazard, PTO */}
-        <div className="menu-row">
+        {/* Baris 2: Hazard (bawah Fit To Work), PTO (bawah Validasi) */}
+        <div className="menu-row menu-row-2-items">
           <button
             className="mobile-menu-button menu-button-orange"
             onClick={() => setActiveMenu("Hazard Report")}
