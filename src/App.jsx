@@ -658,14 +658,14 @@ function App() {
           className="mobile-logo-card"
           style={{
             width: "100%",
-            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            background: "linear-gradient(135deg, #254188 0%, #ff6b35 100%)",
             borderRadius: "0 0 16px 16px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             padding: "16px 0 12px 0",
             marginBottom: 12,
-            boxShadow: "0 4px 20px rgba(102, 126, 234, 0.4)",
+            boxShadow: "0 4px 20px rgba(37, 65, 136, 0.4)",
             position: "relative",
             overflow: "hidden",
           }}
@@ -703,9 +703,9 @@ function App() {
           className="mobile-profile-card"
           style={{
             width: "92%",
-            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            background: "linear-gradient(135deg, #254188 0%, #ff6b35 100%)",
             borderRadius: 12,
-            boxShadow: "0 8px 32px rgba(102, 126, 234, 0.3)",
+            boxShadow: "0 8px 32px rgba(37, 65, 136, 0.3)",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
@@ -848,7 +848,7 @@ function App() {
           </button>
         </div>
       </div>
-      {/* Mobile Main Menu (icon grid) */}
+      {/* Mobile Main Menu (icon grid) - Updated untuk 3 kolom */}
       <div
         className="mobile-main-menu-grid mobile-only"
         style={{
@@ -856,10 +856,10 @@ function App() {
           flexDirection: "column",
           alignItems: "center",
           margin: "16px 0 0 0",
-          gap: 20,
+          gap: 16,
           background: "transparent",
           borderRadius: "20px 20px 0 0",
-          padding: "20px 0",
+          padding: "16px 0",
           boxShadow: "none",
           position: "relative",
           zIndex: 10,
@@ -878,6 +878,7 @@ function App() {
             borderRadius: "20px 20px 0 0",
           }}
         />
+        {/* Baris 1: Fit To Work, Validasi Fit To Work, Take 5 */}
         <div className="menu-row">
           <button
             className="mobile-menu-button menu-button-blue"
@@ -898,10 +899,8 @@ function App() {
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>Validasi Fit To Work</span>
+            <span>Validasi</span>
           </button>
-        </div>
-        <div className="menu-row">
           <button
             className="mobile-menu-button menu-button-green"
             onClick={() => setActiveMenu("Take 5")}
@@ -911,6 +910,9 @@ function App() {
             </svg>
             <span>Take 5</span>
           </button>
+        </div>
+        {/* Baris 2: Hazard, PTO */}
+        <div className="menu-row">
           <button
             className="mobile-menu-button menu-button-orange"
             onClick={() => setActiveMenu("Hazard Report")}
@@ -920,8 +922,6 @@ function App() {
             </svg>
             <span>Hazard</span>
           </button>
-        </div>
-        <div className="menu-row">
           <button
             className="mobile-menu-button menu-button-purple"
             onClick={() => setActiveMenu("PTO")}
@@ -3305,5 +3305,3 @@ function TasklistDemo({ user }) {
 // Trigger Vercel deployment - 2025-08-02 07:30:03
 
 // New deployment trigger
-
-

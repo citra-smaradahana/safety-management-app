@@ -34,7 +34,7 @@ function Login({ onLogin }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+        background: "linear-gradient(135deg, #254188 0%, #ff6b35 100%)",
         padding: "20px",
         boxSizing: "border-box",
       }}
@@ -59,7 +59,7 @@ function Login({ onLogin }) {
             right: "-50px",
             width: "100px",
             height: "100px",
-            background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+            background: "linear-gradient(135deg, #254188 0%, #ff6b35 100%)",
             borderRadius: "50%",
             opacity: 0.1,
           }}
@@ -71,7 +71,7 @@ function Login({ onLogin }) {
             left: "-30px",
             width: "60px",
             height: "60px",
-            background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+            background: "linear-gradient(135deg, #254188 0%, #ff6b35 100%)",
             borderRadius: "50%",
             opacity: 0.1,
           }}
@@ -79,28 +79,11 @@ function Login({ onLogin }) {
 
         {/* Logo and Brand */}
         <div style={{ textAlign: "center", marginBottom: "32px" }}>
-          <div
-            style={{
-              width: "80px",
-              height: "80px",
-              margin: "0 auto 20px auto",
-              borderRadius: "20px",
-              background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: "0 8px 24px rgba(16, 185, 129, 0.3)",
-            }}
-          >
-            <svg width="40" height="40" fill="#fff" viewBox="0 0 24 24">
-              <path d="M12 12c2.7 0 8 1.34 8 4v2H4v-2c0-2.66 5.3-4 8-4zm0-2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
-            </svg>
-          </div>
           <h1
             style={{
               fontWeight: 700,
               fontSize: "32px",
-              color: "#10b981",
+              color: "#254188",
               margin: "0 0 8px 0",
               letterSpacing: "-0.5px",
             }}
@@ -115,14 +98,16 @@ function Login({ onLogin }) {
         {/* Login Form */}
         <form onSubmit={handleSubmit}>
           <div style={{ marginBottom: "20px" }}>
-            <label style={{ 
-              fontWeight: 600, 
-              color: "#374151", 
-              fontSize: "14px",
-              marginBottom: "8px",
-              display: "block"
-            }}>
-              BeatsID Code
+            <label
+              style={{
+                fontWeight: 600,
+                color: "#374151",
+                fontSize: "14px",
+                marginBottom: "8px",
+                display: "block",
+              }}
+            >
+              Username
             </label>
             <div style={{ position: "relative" }}>
               <span
@@ -162,20 +147,22 @@ function Login({ onLogin }) {
                   boxSizing: "border-box",
                   height: "56px",
                 }}
-                placeholder="Masukkan BeatsID Code"
+                placeholder="Masukkan Username"
                 autoFocus
               />
             </div>
           </div>
 
           <div style={{ marginBottom: "24px" }}>
-            <label style={{ 
-              fontWeight: 600, 
-              color: "#374151", 
-              fontSize: "14px",
-              marginBottom: "8px",
-              display: "block"
-            }}>
+            <label
+              style={{
+                fontWeight: 600,
+                color: "#374151",
+                fontSize: "14px",
+                marginBottom: "8px",
+                display: "block",
+              }}
+            >
               Password
             </label>
             <div style={{ position: "relative" }}>
@@ -263,7 +250,7 @@ function Login({ onLogin }) {
             style={{
               width: "100%",
               padding: "16px",
-              background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+              background: "linear-gradient(135deg, #254188 0%, #ff6b35 100%)",
               color: "#ffffff",
               border: "none",
               borderRadius: "12px",
@@ -272,7 +259,7 @@ function Login({ onLogin }) {
               cursor: loading ? "not-allowed" : "pointer",
               transition: "all 0.2s",
               height: "56px",
-              boxShadow: "0 4px 12px rgba(16, 185, 129, 0.3)",
+              boxShadow: "0 4px 12px rgba(37, 65, 136, 0.3)",
             }}
           >
             {loading ? "Loading..." : "LOGIN"}
@@ -286,7 +273,7 @@ function Login({ onLogin }) {
                 background: "#fef2f2",
                 border: "1px solid #fecaca",
                 borderRadius: "8px",
-                color: "#dc2626",
+                color: "#bf1e24",
                 textAlign: "center",
                 fontSize: "14px",
               }}
@@ -297,26 +284,32 @@ function Login({ onLogin }) {
         </form>
 
         {/* Footer */}
-        <div style={{ 
-          textAlign: "center", 
-          marginTop: "32px",
-          paddingTop: "24px",
-          borderTop: "1px solid #f3f4f6"
-        }}>
-          <p style={{ 
-            color: "#9ca3af", 
-            fontSize: "12px", 
-            margin: "0 0 4px 0",
-            fontWeight: 500
-          }}>
+        <div
+          style={{
+            textAlign: "center",
+            marginTop: "32px",
+            paddingTop: "24px",
+            borderTop: "1px solid #f3f4f6",
+          }}
+        >
+          <p
+            style={{
+              color: "#9ca3af",
+              fontSize: "12px",
+              margin: "0 0 4px 0",
+              fontWeight: 500,
+            }}
+          >
             Powered by PT Kemitraan MNK BME
           </p>
-          <p style={{ 
-            color: "#9ca3af", 
-            fontSize: "11px", 
-            margin: 0,
-            fontWeight: 400
-          }}>
+          <p
+            style={{
+              color: "#9ca3af",
+              fontSize: "11px",
+              margin: 0,
+              fontWeight: 400,
+            }}
+          >
             AEGIS-v1.0.0
           </p>
         </div>

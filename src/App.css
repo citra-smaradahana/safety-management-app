@@ -202,20 +202,20 @@ main.monitoring-page {
   background: #a8a8a8;
 }
 
-/* Mobile menu button styles */
+/* Mobile menu button styles - Updated untuk lebih kecil dan 3 kolom */
 .mobile-menu-button {
-  width: 160px !important;
-  height: 140px !important;
+  width: 100px !important;
+  height: 90px !important;
   border-radius: 12px !important;
   border: none !important;
   cursor: pointer !important;
   font-weight: bold !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px !important;
+  gap: 6px !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
   transition: all 0.3s ease !important;
   text-decoration: none !important;
@@ -251,17 +251,17 @@ main.monitoring-page {
   scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
 }
 
-/* Menu row styles */
+/* Menu row styles - Updated untuk 3 kolom */
 .menu-row {
   display: flex;
-  gap: 32px;
+  gap: 16px;
   justify-content: center;
   margin-bottom: 12px;
   position: relative;
   z-index: 1;
 }
 
-/* Menu button color variants */
+/* Menu button color variants - Updated dengan warna yang lebih menarik */
 .menu-button-blue {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
