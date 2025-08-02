@@ -6,6 +6,7 @@ function Login({ onLogin }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,148 +34,293 @@ function Login({ onLogin }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "none",
+        background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+        padding: "20px",
+        boxSizing: "border-box",
       }}
     >
-      <form onSubmit={handleSubmit} className="glass-card login-glass-card">
-        <div style={{ textAlign: "center", marginBottom: 18 }}>
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "400px",
+          background: "#ffffff",
+          borderRadius: "24px",
+          padding: "40px 32px",
+          boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        {/* Background decoration */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-50px",
+            right: "-50px",
+            width: "100px",
+            height: "100px",
+            background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+            borderRadius: "50%",
+            opacity: 0.1,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: "-30px",
+            left: "-30px",
+            width: "60px",
+            height: "60px",
+            background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+            borderRadius: "50%",
+            opacity: 0.1,
+          }}
+        />
+
+        {/* Logo and Brand */}
+        <div style={{ textAlign: "center", marginBottom: "32px" }}>
           <div
             style={{
-              width: 64,
-              height: 64,
-              margin: "0 auto 16px auto",
-              borderRadius: "50%",
-              background: "linear-gradient(135deg, #6366f1 60%, #06b6d4 100%)",
+              width: "80px",
+              height: "80px",
+              margin: "0 auto 20px auto",
+              borderRadius: "20px",
+              background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              boxShadow: "0 2px 8px #6366f133",
+              boxShadow: "0 8px 24px rgba(16, 185, 129, 0.3)",
             }}
           >
-            <svg width="32" height="32" fill="#fff" viewBox="0 0 24 24">
+            <svg width="40" height="40" fill="#fff" viewBox="0 0 24 24">
               <path d="M12 12c2.7 0 8 1.34 8 4v2H4v-2c0-2.66 5.3-4 8-4zm0-2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
             </svg>
           </div>
-          <h2
+          <h1
             style={{
               fontWeight: 700,
-              fontSize: 28,
-              color: "#fff",
-              margin: 0,
-              letterSpacing: "-1px",
+              fontSize: "32px",
+              color: "#10b981",
+              margin: "0 0 8px 0",
+              letterSpacing: "-0.5px",
             }}
           >
-            Sign In
-          </h2>
-          <p style={{ color: "#a5b4fc", fontSize: 15, margin: 0 }}>
-            Masuk ke akun Anda
+            aegis
+          </h1>
+          <p style={{ color: "#6b7280", fontSize: "16px", margin: 0 }}>
+            Safety Management System
           </p>
         </div>
-        <label style={{ fontWeight: 500, color: "#fff" }}>
-          Username
-          <div style={{ position: "relative" }}>
-            <span
+
+        {/* Login Form */}
+        <form onSubmit={handleSubmit}>
+          <div style={{ marginBottom: "20px" }}>
+            <label style={{ 
+              fontWeight: 600, 
+              color: "#374151", 
+              fontSize: "14px",
+              marginBottom: "8px",
+              display: "block"
+            }}>
+              BeatsID Code
+            </label>
+            <div style={{ position: "relative" }}>
+              <span
+                style={{
+                  position: "absolute",
+                  left: "16px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  color: "#9ca3af",
+                }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="#9ca3af"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-8 0v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </span>
+              <input
+                value={user}
+                onChange={(e) => setUser(e.target.value)}
+                required
+                style={{
+                  width: "100%",
+                  padding: "16px 16px 16px 48px",
+                  border: "2px solid #e5e7eb",
+                  borderRadius: "12px",
+                  fontSize: "16px",
+                  outline: "none",
+                  transition: "all 0.2s",
+                  background: "#f9fafb",
+                  boxSizing: "border-box",
+                  height: "56px",
+                }}
+                placeholder="Masukkan BeatsID Code"
+                autoFocus
+              />
+            </div>
+          </div>
+
+          <div style={{ marginBottom: "24px" }}>
+            <label style={{ 
+              fontWeight: 600, 
+              color: "#374151", 
+              fontSize: "14px",
+              marginBottom: "8px",
+              display: "block"
+            }}>
+              Password
+            </label>
+            <div style={{ position: "relative" }}>
+              <span
+                style={{
+                  position: "absolute",
+                  left: "16px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  color: "#9ca3af",
+                }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="#9ca3af"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <rect x="3" y="11" width="18" height="11" rx="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+              </span>
+              <input
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                style={{
+                  width: "100%",
+                  padding: "16px 16px 16px 48px",
+                  border: "2px solid #e5e7eb",
+                  borderRadius: "12px",
+                  fontSize: "16px",
+                  outline: "none",
+                  transition: "all 0.2s",
+                  background: "#f9fafb",
+                  boxSizing: "border-box",
+                  height: "56px",
+                }}
+                placeholder="Masukkan Password"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{
+                  position: "absolute",
+                  right: "16px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  color: "#9ca3af",
+                }}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="#9ca3af"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  {showPassword ? (
+                    <>
+                      <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
+                      <line x1="1" y1="1" x2="23" y2="23" />
+                    </>
+                  ) : (
+                    <>
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </>
+                  )}
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            disabled={loading}
+            style={{
+              width: "100%",
+              padding: "16px",
+              background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+              color: "#ffffff",
+              border: "none",
+              borderRadius: "12px",
+              fontSize: "16px",
+              fontWeight: 600,
+              cursor: loading ? "not-allowed" : "pointer",
+              transition: "all 0.2s",
+              height: "56px",
+              boxShadow: "0 4px 12px rgba(16, 185, 129, 0.3)",
+            }}
+          >
+            {loading ? "Loading..." : "LOGIN"}
+          </button>
+
+          {error && (
+            <div
               style={{
-                position: "absolute",
-                left: 12,
-                top: 10,
-                color: "#94a3b8",
+                marginTop: "16px",
+                padding: "12px 16px",
+                background: "#fef2f2",
+                border: "1px solid #fecaca",
+                borderRadius: "8px",
+                color: "#dc2626",
+                textAlign: "center",
+                fontSize: "14px",
               }}
             >
-              <svg
-                width="18"
-                height="18"
-                fill="none"
-                stroke="#94a3b8"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M16 21v-2a4 4 0 0 0-8 0v2" />
-                <circle cx="12" cy="7" r="4" />
-              </svg>
-            </span>
-            <input
-              value={user}
-              onChange={(e) => setUser(e.target.value)}
-              required
-              style={{
-                width: "100%",
-                padding: "10px 12px 10px 38px",
-                marginTop: "6px",
-                marginBottom: 0,
-                border: "1.5px solid #cbd5e1",
-                borderRadius: 8,
-                fontSize: 16,
-                outline: "none",
-                transition: "border 0.2s",
-                background: "#f8fafc",
-                boxSizing: "border-box",
-              }}
-              autoFocus
-            />
-          </div>
-        </label>
-        <label style={{ fontWeight: 500, color: "#fff" }}>
-          Password
-          <div style={{ position: "relative" }}>
-            <span
-              style={{
-                position: "absolute",
-                left: 12,
-                top: 10,
-                color: "#94a3b8",
-              }}
-            >
-              <svg
-                width="18"
-                height="18"
-                fill="none"
-                stroke="#94a3b8"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <rect x="3" y="11" width="18" height="11" rx="2" />
-                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              </svg>
-            </span>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              style={{
-                width: "100%",
-                padding: "10px 12px 10px 38px",
-                marginTop: "6px",
-                marginBottom: 0,
-                border: "1.5px solid #cbd5e1",
-                borderRadius: 8,
-                fontSize: 16,
-                outline: "none",
-                transition: "border 0.2s",
-                background: "#f8fafc",
-                boxSizing: "border-box",
-              }}
-            />
-          </div>
-        </label>
-        <button
-          type="submit"
-          disabled={loading}
-          style={{
-            width: "100%",
-            marginTop: 8,
-            cursor: loading ? "not-allowed" : "pointer",
-          }}
-        >
-          {loading ? "Loading..." : "Login"}
-        </button>
-        {error && (
-          <p style={{ color: "#ef4444", textAlign: "center", margin: 0 }}>
-            {error}
+              {error}
+            </div>
+          )}
+        </form>
+
+        {/* Footer */}
+        <div style={{ 
+          textAlign: "center", 
+          marginTop: "32px",
+          paddingTop: "24px",
+          borderTop: "1px solid #f3f4f6"
+        }}>
+          <p style={{ 
+            color: "#9ca3af", 
+            fontSize: "12px", 
+            margin: "0 0 4px 0",
+            fontWeight: 500
+          }}>
+            Powered by PT Kemitraan MNK BME
           </p>
-        )}
-      </form>
+          <p style={{ 
+            color: "#9ca3af", 
+            fontSize: "11px", 
+            margin: 0,
+            fontWeight: 400
+          }}>
+            AEGIS-v1.0.0
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
