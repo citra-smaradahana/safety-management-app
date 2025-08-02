@@ -702,17 +702,17 @@ function App() {
         <div
           className="mobile-profile-card"
           style={{
-            width: "calc(100% - 32px)",
-            margin: "0 16px",
+            width: "calc(100% - 48px)",
+            margin: "0 24px",
             background: "linear-gradient(135deg, #254188 0%, #ff6b35 100%)",
-            borderRadius: 12,
+            borderRadius: 16,
             boxShadow: "0 8px 32px rgba(37, 65, 136, 0.3)",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            padding: "12px 16px",
-            marginBottom: 8,
-            gap: 12,
+            padding: "16px 20px",
+            marginBottom: 16,
+            gap: 16,
             position: "relative",
             overflow: "hidden",
           }}
